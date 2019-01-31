@@ -5,5 +5,12 @@ jobs:
       - image: debian:stretch
     steps:
       - checkout
-      - run: gatsby build
-      - run: npm test -- --watch
+      - run:
+          name: install npm
+          command: npm install
+      - run:
+          name: build gatsbyjs
+          command: gatsby build
+      - run:
+          name: test
+          command: npm test -- --watch
