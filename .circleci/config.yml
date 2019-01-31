@@ -6,6 +6,4 @@ jobs:
     steps:
       - checkout
       - run: gatsby build
-          name: building
       - run: npm test -- --watch
-          name: running tests
