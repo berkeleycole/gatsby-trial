@@ -7,4 +7,5 @@ jobs:
       - checkout
       - run: gatsby build
           name: building
-          command: built
+      - run: npm test -- --watch
+          name: running tests
